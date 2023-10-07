@@ -18,7 +18,6 @@ set(CMAKE_CXX_EXTENSIONS ON)
 # Headers
 set(PROJECT_INCLUDE_DIRECTORIES
     ${CMAKE_CURRENT_SOURCE_DIR}/inc/
-    ${CMAKE_CURRENT_SOURCE_DIR}/cv-plot-1.2.2/CvPlot/inc/
     )
 
 # Sources
