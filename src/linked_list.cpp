@@ -1,39 +1,8 @@
 #include <iostream>
-#include <vector>
-#include <unordered_map>
-#include <stdlib.h>
+
+#include <linked_list.h>
 
 using namespace std;
-
-template <typename T> class Node {
-    public:
-        Node(T value) {
-            val = value;
-        }
-        T val;
-        Node<T> *next;
-    private:
-
-};
-
-
-template <typename T> class LL {
-    public:
-        LL() {
-            head = nullptr;
-            tail = nullptr;
-        }
-        uint32_t size();
-        void add(T val);
-        void prepend(T val);
-        void* last();
-        void print();
-        void del(uint32_t num);
-
-    private:
-        Node<T> *head;
-        Node<T> *tail;
-};
 
 template <typename T> uint32_t LL<T>::size(void) {
     uint32_t size = 0;
@@ -122,38 +91,3 @@ template <typename T> void LL<T>::del(uint32_t num) {
     }
 }
 
-//TODO insert
-
-int main(void) {
-
-    LL<int> list;
-    list.add(34);
-    list.add(36);
-    list.prepend(4);
-    list.prepend(1);
-
-    list.print();
-    list.del(0);
-    list.del(0);
-    list.del(0);
-    list.del(0);
-    list.del(0);
-    list.del(0);
-    list.prepend(1);
-    cout << "Size = " << list.size() << endl;
-    list.print();
-    /*
-    list.add(5);
-    cout << "Size = " << list.size() << endl;
-    list.add(1);
-    list.add(2);
-    list.add(3);
-
-    list.add_at_start(55);
-    list.add_at_start(66);
-    list.print();
-    list.del(44);
-    list.print();
-    */
-    return 0;
-}
