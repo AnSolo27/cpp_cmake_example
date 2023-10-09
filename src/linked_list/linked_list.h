@@ -8,6 +8,8 @@ template <typename T> class Node {
         Node(T value) {
             val = value;
         }
+
+        //TODO clear mem in destruct
         T val;
         Node<T> *next;
     private:
