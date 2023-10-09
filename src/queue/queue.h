@@ -16,12 +16,8 @@ template <typename T> class qNode {
 
 template <typename T> class Queue {
     public:
-        Queue() {
-            to_write = new qNode<T>(0);
-            to_write->next = nullptr;
-            to_read = to_write;
-            items = 0;
-        }
+        Queue();
+        ~Queue();
         uint32_t size() {
             return items;
         }

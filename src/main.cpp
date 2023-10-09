@@ -13,12 +13,13 @@ using namespace std;
 
 int main(void) {
     Queue<int> q;
-    for (int i = 0; i < 10; i++) {
+    
+    for (int i = 0; i < 6; i++) {
         q.enqueue(i);
     }
     q.print();
 
-    for (int i = 0; i < 5; i++) {
+    for (int i = 0; i < 3; i++) {
         cout << q.dequeue() << endl;
     }
     q.print();
