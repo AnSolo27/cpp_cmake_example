@@ -37,10 +37,13 @@ $(BUILD_DIR)/Makefile: CMakeLists.txt
 run:
 	@echo "Start program"
 	@echo "#############"
-	build/$(PROJECT_NAME)$(OUTPUT_EXT)
+	build/src/main$(OUTPUT_EXT)
 
 test:
 	cd build && ctest
+
+utest:
+	cd build/test && ./unit_tests$(OUTPUT_EXT)
 
 clean:
 	rm -rf $(BUILD_DIR)
