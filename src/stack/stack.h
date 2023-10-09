@@ -19,7 +19,7 @@ template <typename T> class Stack {
         bool empty() {
             bool result = false;
             if (c_size == 0) {
-                result == true;
+                result = true;
             }
             return result;
         }

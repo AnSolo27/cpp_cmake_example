@@ -25,6 +25,8 @@ add_executable(
 
 target_link_libraries(unit_tests
   PRIVATE
+    STACK_LIB
+    LL_LIB
     gtest_main
   )
 

@@ -26,6 +26,7 @@ template <typename T> class LL {
         void* last();
         void print();
         void del(uint32_t num);
+        T get(uint32_t num);
 
     private:
         Node<T> *head;

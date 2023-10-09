@@ -91,3 +91,17 @@ template <typename T> void LL<T>::del(uint32_t num) {
     }
 }
 
+template <typename T> T LL<T>::get(uint32_t num) {
+    Node<T> *node = this->head;
+    T result = 0;
+    if (num > this->size()) {
+        return result;
+    }
+
+    for (uint32_t i = 0; i < num; i++) {
+        node = node->next;
+    }
+    result = node->val;
+    return result;
+}
+
