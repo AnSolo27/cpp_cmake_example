@@ -31,7 +31,6 @@ add_executable(${EXECUTABLE}
     ${PROJECT_SOURCES}
 )
 
-
 # Add header directories (AFTER add_executable !!)
 target_include_directories(${EXECUTABLE} PRIVATE
     ${PROJECT_INCLUDE_DIRECTORIES})
@@ -52,3 +51,6 @@ target_compile_options(${EXECUTABLE} PRIVATE
     $<$<CONFIG:Release>:-Os -g0>)
 
 target_link_options(${EXECUTABLE} PRIVATE)
+
+enable_testing()
+add_subdirectory(test)
