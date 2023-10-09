@@ -8,7 +8,9 @@ PLATFORM = $(if $(OS),$(OS),$(shell uname -s))
 
 ifeq ($(PLATFORM),Windows_NT)
     BUILD_SYSTEM ?= MinGW Makefiles
+    OUTPUT_EXT ?= .exe
 else
+	OUTPUT_EXT ?=
     ifeq ($(PLATFORM),Linux)
         BUILD_SYSTEM ?= Unix Makefiles
     else
@@ -35,7 +37,7 @@ $(BUILD_DIR)/Makefile: CMakeLists.txt
 run:
 	@echo "Start program"
 	@echo "#############"
-	build/$(PROJECT_NAME).exe
+	build/$(PROJECT_NAME)$(OUTPUT_EXT)
 
 clean:
 	rm -rf $(BUILD_DIR)
