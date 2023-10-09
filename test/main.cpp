@@ -6,6 +6,9 @@
 #include "stack.h"
 #include "stack.cpp"
 
+#include "queue.h"
+#include "queue.cpp"
+
 TEST(LL, size) {
     LL<int> list;
     EXPECT_EQ (list.size(), 0);
@@ -58,6 +61,24 @@ TEST(STACK, order) {
     EXPECT_EQ (stack.pop(), 3);
     EXPECT_EQ (stack.pop(), 2);
     EXPECT_EQ (stack.pop(), 1);
+}
+
+
+TEST(queue, empty) {
+    Queue<int> q;
+    EXPECT_EQ(q.size(), 0);
+
+    EXPECT_EQ(q.dequeue(), 0);
+}
+
+TEST(queue, order) {
+    Queue<int> q;
+    for (int i = 0; i < 100; i++) {
+        q.enqueue(i);
+    }
+    for (int i = 0; i < 100; i++) {
+        EXPECT_EQ(q.dequeue(), i);
+    }
 }
 
 int main(int argc, char **argv) {

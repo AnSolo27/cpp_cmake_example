@@ -6,28 +6,22 @@
 #include "stack.h"
 #include "stack.cpp"
 
+#include "queue.h"
+#include "queue.cpp"
+
 using namespace std;
 
 int main(void) {
-    LL<int> list;
-    list.add(3);
-    
-    list.add(34);
-    list.add(36);
-    list.prepend(4);
-    list.prepend(1);
+    Queue<int> q;
+    for (int i = 0; i < 10; i++) {
+        q.enqueue(i);
+    }
+    q.print();
 
-    list.print();
-    list.del(0);
-    list.prepend(1);
-    cout << "Size = " << list.size() << endl;
-    list.print();
-
-    Stack<char> st(10);
-    st.push(3);
-    st.push(5);
-    st.print();
-    
+    for (int i = 0; i < 5; i++) {
+        cout << q.dequeue() << endl;
+    }
+    q.print();
 
     return 0;
 }

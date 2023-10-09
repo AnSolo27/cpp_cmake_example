@@ -27,6 +27,7 @@ target_link_libraries(unit_tests
   PRIVATE
     STACK_LIB
     LL_LIB
+    QUEUE_LIB
     gtest_main
   )
 

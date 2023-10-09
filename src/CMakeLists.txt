@@ -24,5 +24,6 @@ target_link_options(main PRIVATE)
 
 add_subdirectory(linked_list)
 add_subdirectory(stack)
+add_subdirectory(queue)
 
-target_link_libraries (main STACK_LIB LL_LIB)
+target_link_libraries (main STACK_LIB LL_LIB QUEUE_LIB)
