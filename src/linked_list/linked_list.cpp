@@ -4,6 +4,14 @@
 
 using namespace std;
 
+
+
+/**
+ * @brief LL items count
+ * 
+ * @tparam T
+ * @return uint32_t
+ */
 template <typename T> uint32_t LL<T>::size(void) {
     uint32_t size = 0;
 
@@ -22,6 +30,13 @@ template <typename T> uint32_t LL<T>::size(void) {
     return size;
 }
 
+
+/**
+ * @brief Adds value to LL
+ * 
+ * @tparam T 
+ * @param value
+ */
 template <typename T> void LL<T>::add(T value) {
     // find last node
     Node<T> *node = this->tail;
@@ -42,6 +57,11 @@ template <typename T> void LL<T>::add(T value) {
     
 }
 
+/**
+ * @brief Prints all LL values (using cout <<)
+ * 
+ * @tparam T 
+ */
 template <typename T> void LL<T>::print(void) {
     Node<T> *node = this->head;
     // find last node
@@ -64,6 +84,12 @@ template <typename T> void LL<T>::prepend(T value) {
     }
 }
 
+/**
+ * @brief Delete LL item
+ * 
+ * @tparam T 
+ * @param num item num (0 to size)
+ */
 template <typename T> void LL<T>::del(uint32_t num) {
     Node<T> *node = this->head;
     Node<T> *prv_node = this->head;
@@ -91,6 +117,13 @@ template <typename T> void LL<T>::del(uint32_t num) {
     }
 }
 
+/**
+ * @brief Gets LL value
+ * 
+ * @tparam T 
+ * @param num item num (0 to size)
+ * @return T 
+ */
 template <typename T> T LL<T>::get(uint32_t num) {
     Node<T> *node = this->head;
     T result = 0;
